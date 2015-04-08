@@ -5,3 +5,38 @@ body {
 h1 {
     margin-left: -20px;
 }
+
+h1.header {
+    margin-left: 0px;
+}
+
+nav {
+	background: #B521BF;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+a:link, a:visited {
+    display: block;
+    width: 120px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #B521BF;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a:hover, a:active {
+    background-color: #377977;
+}
