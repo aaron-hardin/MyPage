@@ -23,6 +23,11 @@ func getHandler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		// TODO handle
 	}
+	if strings.HasSuffix(path, ".css") {
+		w.Header().Set("Content-Type", "text/css")
+	} else if strings.HasSuffix(path, ".js") {
+		w.Header().Set("Content-Type", "text/javascript")
+	}
 	fmt.Fprintf(w, "%s", p.Body)
 }
 
