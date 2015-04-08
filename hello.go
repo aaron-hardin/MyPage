@@ -7,7 +7,11 @@ import (
 	"strings"
 )
 
-func handler(w http.ResponseWriter, r *http.Request) {
+func postHandler(w http.ResponseWriter, r *http.Request) {
+
+}
+
+func getHandler(w http.ResponseWriter, r *http.Request) {
 	path := r.URL.Path[1:]
 	if len(path) == 0 {
 		path = "index.html"
@@ -20,6 +24,16 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		// TODO handle
 	}
 	fmt.Fprintf(w, "%s", p.Body)
+}
+
+func handler(w http.ResponseWriter, r *http.Request) {
+	if r.Method == "GET" {
+		getHandler(w, r)
+	} else if r.Method == "POST" {
+		postHandler(w, r)
+	} else {
+		// TODO error handling
+	}
 }
 
 func main() {
