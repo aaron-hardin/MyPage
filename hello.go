@@ -17,7 +17,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	}
 	p, err := loadPage(path)
 	if err != nil {
-		http.Redirect(w, r, "/edit/"+path, http.StatusFound)
+		// TODO handle
 	}
 	fmt.Fprintf(w, "%s", p.Body)
 }
