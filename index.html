@@ -10,8 +10,12 @@
   </head>
   <body ng-app="single-page-app">
     <div ng-controller="cfgController">
-      <div>
-        <h1 class="header">Welcome!</h1>
+      <div class="navigation">
+        <div class="profile">
+          <img src="me.jpg">
+          <h1>Aaron Hardin</h1>
+          <span>Software Developer</span>
+        </div>
         <nav>
           <ul>
             <li><a href="#/">Home</a></li>
@@ -20,7 +24,7 @@
         </nav>
       </div>
       <br/>
-      <div ng-view>
+      <div ng-view class="content">
         <!--
         This DIV loads templates depending upon route.
         -->

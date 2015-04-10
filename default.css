@@ -1,9 +1,5 @@
 body {
-    
-}
-
-h1 {
-    margin-left: -20px;
+   margin: 0px; 
 }
 
 h1.header {
@@ -11,7 +7,18 @@ h1.header {
 }
 
 nav {
-	background: #B521BF;
+    margin: 0 20px;
+}
+
+nav li {
+	margin: 5px 0;
+    padding: 2px 0;
+    width: 100%;
+}
+
+nav li a {
+    background: #B521BF;
+    min-width: 120px;
 }
 
 ul {
@@ -25,13 +32,19 @@ li {
     float: left;
 }
 
+.navigation {
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    background: rgb(7, 253, 253);
+}
+
 a:link, a:visited {
     display: block;
-    width: 120px;
     font-weight: bold;
     color: #FFFFFF;
     background-color: #B521BF;
-    text-align: center;
+    text-align: left;
     padding: 4px;
     text-decoration: none;
     text-transform: uppercase;
@@ -39,4 +52,22 @@ a:link, a:visited {
 
 a:hover, a:active {
     background-color: #377977;
+}
+
+.content {
+    margin-left: 80px;
+}
+
+img {
+    width: 120px;
+    border-radius: 20%;
+}
+
+.profile {
+    text-align: center;
+    margin: 20px;
+}
+
+.profile h1 {
+    font-size: 20px;
 }
